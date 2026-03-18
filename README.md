@@ -25,8 +25,142 @@ Validate the HTML and CSS code.
 Publish the website in the given URL.
 
 ## PROGRAM:
+```
+gallery.html
+<html>
+<head>
+    <title>Interactive Image Gallery</title>
+    <link href="gallery.css" rel="stylesheet">
+    <script src="gallery.js"></script>
+</head>
+<body>
+<header>
+    zootopia image gallery
+</header>
+<div class="main">
+    <div class="card">
+        <img src="zooto1.png" id="Image">
+        <p id="Text">Nick Wilde</p>
+        <div class="btns">
+            <button onclick="changeImage('prev')">Previous</button>
+            <button onclick="changeImage('next')">Next</button>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    &copy;Logamithra K
+</footer>
+</body>
+</html>
+
+gallery.css
+body {
+    background: rgb(188, 137, 137);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+header 
+{
+    background: rgb(91, 7, 116);
+    color: white;
+    text-align: center;
+    padding: 2px;
+    font-size: 23px;
+    font-weight:bolder;
+}
+.main 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.card 
+{
+    background: rgb(178, 117, 143);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    width: 600px;
+    height:auto;
+}
+.card img {
+    width: 100%;
+    height: 650px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+p
+{
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+.btns 
+{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-weight: bolder;
+}
+
+.btns button 
+{
+    background:rgb(236, 152, 202);
+    color: white;
+    border: none;
+    font-weight: bolder;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.footer 
+{
+    background: rgb(91, 7, 116);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 25px;
+    margin-top: 19px;
+}
+gallery.js
+const gallery = [
+    { src: "zooto1.png", caption: "Nick Wilde" },
+    { src: "zooto2.png", caption: "Finnick" },
+    { src: "zooto3.png", caption: "Bellwether" },
+    { src: "zooto4.png", caption: "judy" },
+];
+let index = 0;
+function changeImage(type) {
+    if (type === "next") 
+    {
+        index++;
+        if(index >= gallery.length)
+        {
+            index = 0;
+        }
+    }
+    if (type === "prev") 
+    {
+        index--;
+        if(index < 0)
+        {
+            index = gallery.length - 1;
+        }
+    }
+    document.getElementById("Image").src = gallery[index].src;
+    document.getElementById("Text").innerText = gallery[index].caption;
+}
+
+
+```
 
 ## OUTPUT:
+
+![alt text](output1.png)
+![alt text](output2.png)
+![alt text](output3.png)
+![alt text](output4.png)
 
 ## RESULT:
 The program for designing an interactive image gallery using HTML, CSS and JavaScript is executed successfully.
