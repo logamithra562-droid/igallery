@@ -157,10 +157,10 @@ function changeImage(type) {
 
 ## OUTPUT:
 
-![alt text](output1.png)
-![alt text](output2.png)
-![alt text](output3.png)
-![alt text](output4.png)
+![alt text](<Screenshot 2026-03-18 134831.png>)
+![alt text](<Screenshot 2026-03-18 134905.png>)
+![alt text](<Screenshot 2026-03-18 134917.png>)
+![alt text](<Screenshot 2026-03-18 134930.png>)
 
 ## RESULT:
 The program for designing an interactive image gallery using HTML, CSS and JavaScript is executed successfully.
